@@ -1,1 +1,19 @@
-<h2>Welcome to Scopic.com</h2>
+<h2>Welcome to Scopic.com 2</h2>
+<div data-bind="scope: 'productgrid'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "productgrid": {
+                        "component": "Scopic_ProductList/js/productgrid",
+                        "template" : "Scopic_ProductList/productgrid"
+                    }
+                }
+            }
+        }
+    }
+</script>
